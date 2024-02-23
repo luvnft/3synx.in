@@ -16,9 +16,11 @@ import {
 import toast, { Toaster } from 'react-hot-toast';
 
 const pages: { label: string; path: string }[] = [
-  { label: 'Account', path: '/account' },
-  { label: 'Clusters', path: '/clusters' },
-  { label: 'Counter', path: '/counter' },
+  { label: 'Your Account', path: '/account' },
+  { label: 'Investment Pools', path: '/#' },
+  { label: 'Tokenize', path: '/clusters' },
+  { label: 'Analyze', path: '/counter' },
+  { label: 'About', path: '/#' },
 ];
 
 export function UiLayout({ children }: { children: ReactNode }) {
@@ -27,27 +29,32 @@ export function UiLayout({ children }: { children: ReactNode }) {
   return (
     <div className="h-full flex flex-col">
       <div className="navbar bg-base-300 text-neutral-content flex-col md:flex-row space-y-2 md:space-y-0">
-        <div className="flex-1">
+        <div className="flex">
           <Link className="btn btn-ghost normal-case text-xl" href="/">
-            <img
+            {/* <img
               className="h-4 md:h-6"
               alt="Solana Logo"
               src="/solana-logo.png"
-            />
+            /> */}
+
+            <span className="ml-3 font-bold text-sm">
+              {' '}
+              SynX - RWA Investment Pools
+            </span>
           </Link>
-          <ul className="menu menu-horizontal px-1 space-x-2">
-            {pages.map(({ label, path }) => (
-              <li key={path}>
-                <Link
-                  className={pathname.startsWith(path) ? 'active' : ''}
-                  href={path}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
         </div>
+             {/* These items should be aligned in the center */}
+      <div className="flex-1 justify-center items-center">
+        <ul className="menu menu-horizontal px-1 space-x-2">
+          {pages.map(({ label, path }) => (
+            <li key={path}>
+              <Link className={pathname.startsWith(path) ? 'active' : ''} href={path} >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
         <div className="flex-none space-x-2">
           <WalletButton />
           <ClusterUiSelect />
@@ -80,6 +87,7 @@ export function UiLayout({ children }: { children: ReactNode }) {
             >
               create-solana-dapp
             </a>
+            . Developed by SynX
           </p>
         </aside>
       </footer>

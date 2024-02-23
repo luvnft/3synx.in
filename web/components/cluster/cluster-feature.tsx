@@ -11,8 +11,8 @@ export default function ClusterFeature() {
   return (
     <div>
       <AppHero
-        title="Clusters"
-        subtitle="Manage and select your Solana clusters"
+        title="Tokenize Real World Assets"
+        subtitle="Set up, create publish and manage new investmentment pools."
       >
         <ClusterUiModal
           show={showModal}
@@ -22,7 +22,7 @@ export default function ClusterFeature() {
           className="btn btn-xs lg:btn-md btn-primary"
           onClick={() => setShowModal(true)}
         >
-          Add Cluster
+          Tokenize RWA
         </button>
       </AppHero>
       <ClusterUiTable />

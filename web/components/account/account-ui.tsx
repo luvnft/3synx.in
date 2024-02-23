@@ -130,7 +130,7 @@ export function AccountTokens({ address }: { address: PublicKey }) {
     <div className="space-y-2">
       <div className="justify-between">
         <div className="flex justify-between">
-          <h2 className="text-2xl font-bold">Token Accounts</h2>
+          <h2 className="text-2xl font-bold">Investment Pools</h2>
           <div className="space-x-2">
             {query.isLoading ? (
               <span className="loading loading-spinner"></span>
@@ -158,7 +158,7 @@ export function AccountTokens({ address }: { address: PublicKey }) {
       {query.isSuccess && (
         <div>
           {query.data.length === 0 ? (
-            <div>No token accounts found.</div>
+            <div>No investment pools yet... head over to the marketplace! </div>
           ) : (
             <table className="table border-4 rounded-lg border-separate border-base-300">
               <thead>

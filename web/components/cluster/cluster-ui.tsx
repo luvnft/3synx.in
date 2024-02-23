@@ -101,7 +101,7 @@ export function ClusterUiModal({
 
   return (
     <AppModal
-      title={'Add Cluster'}
+      title={'Create Investment Pool'}
       hide={hideModal}
       show={show}
       submit={() => {
@@ -119,7 +119,7 @@ export function ClusterUiModal({
       />
       <input
         type="text"
-        placeholder="Endpoint"
+        placeholder="Symbol"
         className="input input-bordered w-full"
         value={endpoint}
         onChange={(e) => setEndpoint(e.target.value)}

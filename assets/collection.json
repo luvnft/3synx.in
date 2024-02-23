@@ -1,0 +1,15 @@
+{
+    "name": "SynX",
+    "symbol": "SYNX",
+    "description": "Collection of 10 SynX NFTs for the first 10 SynX tokenized asset owners",
+    "image": "collection.png",
+    "attributes": [],
+    "properties": {
+      "files": [
+        {
+          "uri": "collection.png",
+          "type": "image/png"
+        }
+      ]
+    }
+  }
